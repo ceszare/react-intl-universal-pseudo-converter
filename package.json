@@ -1,0 +1,38 @@
+{
+  "name": "react-intl-universal-pseudo-converter",
+  "version": "0.0.0",
+  "description": "A utility to convert JSON locale files into pseudo-localization format.",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ceszare/react-intl-universal-pseudo-converter.git"
+  },
+  "keywords": [
+    "react-intl-universal",
+    "i18n",
+    "localization",
+    "localisation",
+    "pseudo",
+    "pseudo-localization",
+    "pseudo-localisation"
+  ],
+  "author": "Cesar Zapata",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ceszare/react-intl-universal-pseudo-converter/issues"
+  },
+  "homepage": "https://github.com/ceszare/react-intl-universal-pseudo-converter#readme",
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-jest": "^23.6.0",
+    "babel-preset-env": "^1.7.0",
+    "jest": "^23.6.0"
+  },
+  "dependencies": {
+    "icu-pseudo-translate": "^2.0.0",
+    "yargs": "^12.0.5"
+  }
+}
