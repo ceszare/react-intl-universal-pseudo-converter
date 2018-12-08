@@ -2,6 +2,10 @@
 
 This tool converts a locale source file as the ones used by [react-intl-universal](https://github.com/alibaba/react-intl-universal) and outputs a new file with pseudo-localized strings. The pseudo-localization is carried out by [Tryggvigy Gylfason's](https://github.com/tryggvigy) [pseudo-lozalization library](https://github.com/tryggvigy/pseudo-localization).
 
+## Example
+
+I have written a simple example on [Repl.it](https://repl.it/@sigurdvh/React-Intl-Universal-Pseudo-Converter-Example?language=nodejs). Simply visit the website, and modify the locale.json file. Once done, hit the `run` button. The file will be generated on the file system. Since Repl.it doesn't know there is a new file, the UI won't refresh by itself until you make a change, so go ahead and try to add a new file or folder and you will see the pseudo file appear.
+
 ## Installing
 
 ### Prerequisites
