@@ -19,7 +19,10 @@
     "pseudo-localization",
     "pseudo-localisation"
   ],
-  "author": "Cesar Zapata",
+  "author": {
+    "name": "Cesar Zapata",
+    "email": "community@ceszare.com"
+  },
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/ceszare/react-intl-universal-pseudo-converter/issues"

@@ -1,43 +1,28 @@
 const fs = require('fs');
-const { pseudoTranslate } = require('icu-pseudo-translate');
-const argv = require('yargs')
-  .usage('Usage: $0 <command> [options]')
-  .command('create', 'Creates a pseudo-localized file')
-  .example('$0 create -f en-us.json', 'creates a pseudo-localized file from \'en-us.json\'')
-  .alias('f', 'file')
-  .nargs('f', 1)
-  .describe('f', 'Input file')
-  .demandOption(['f'])
-  .alias('e', 'encoding')
-  .nargs('e', 1)
-  .describe('e', 'File encoding')
-  .default('e', 'utf8')
-  .alias('o', 'output')
-  .nargs('o', 1)
-  .describe('o', 'Output file')
-  .default('o', 'pseudo.locale.json')
-  .help('h')
-  .alias('h', 'help')
-  .alias('v', 'version')
-  .epilog('copyright 2018 Cesar Zapata')
-  .argv;
 
-const locale = JSON.parse(fs.readFileSync(argv.file, argv.encoding));
-
-function transform_tree(node) {
-  if (typeof node === 'string') {
-    return pseudoTranslate(node);
-  } else if (Array.isArray(node)){
-    return node.reduce((accumulator, currentValue) => {
-      return [...accumulator, transform_tree(currentValue)];
-    }, []);
-  } else if (typeof node === 'object' && node !== null) {
-    return Object.keys(node).reduce((accumulator, currentValue) => {
-      return { ...accumulator, [currentValue]: transform_tree(node[currentValue]) };
-    }, {});
-  } else {
-    return node;
-  }
+function getParsedArguments() {
+  return require('./argsParser');
 }
 
-console.log(JSON.stringify(transform_tree(locale), null, 4));
+function getLocaleFromArguments(argv) {
+  return JSON.parse(fs.readFileSync(argv.file, argv.encoding));
+}
+
+function processLocale(locale) {
+  const transform_tree = require('./transformer');
+  return transform_tree(locale);
+}
+
+function writeLocaleToFile(argv, locale) {
+  const localeString = JSON.stringify(locale, null, 2);
+  fs.writeFileSync(argv.output, localeString, argv.encoding);
+}
+
+function executeApp() {
+  const argv = getParsedArguments();
+  const locale = getLocaleFromArguments(argv);
+  const transformedLocale = processLocale(locale);
+  writeLocaleToFile(argv, transformedLocale);
+}
+
+executeApp();

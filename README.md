@@ -2,11 +2,12 @@
 
 This tool converts a locale source file as the ones used by [react-intl-universal](https://github.com/alibaba/react-intl-universal) and outputs a new file with pseudo-localized strings. The pseudo-localization is carried out by [Tryggvigy Gylfason's](https://github.com/tryggvigy) [pseudo-lozalization library](https://github.com/tryggvigy/pseudo-localization).
 
+## Installing
+
 ### Prerequisites
 
-The package requires you to define an input localization file with the [nested JSON locale format defined by react-intl-universal](https://github.com/alibaba/react-intl-universal/releases/tag/1.4.3).
+The package requires you to define an input localization file that uses [ICU message format](http://userguide.icu-project.org/formatparse/messages) strings with the [nested JSON locale format defined by react-intl-universal](https://github.com/alibaba/react-intl-universal/releases/tag/1.4.3).
 
-## Installing
 
 To install it locally, run the following command:
 
@@ -27,12 +28,21 @@ yarn global add react-intl-universal-pseudo-converter
 The utility follows the following syntax:
 
 ```
-react-intl-universal-pseudo-converter <input_file> [-o <output_file>]
+Usage: react-intl-universal-pseudo-converter <command> [options]
+
+Commands:
+  react-intl-universal-pseudo-converter create  Creates a pseudo-localized file
+
+Options:
+  -f, --file      Input file                                          [required]
+  -e, --encoding  File encoding                                [default: "utf8"]
+  -o, --output    Output file                    [default: "pseudo.locale.json"]
+  -h, --help      Show help                                            [boolean]
+  -v, --version   Show version number                                  [boolean]
+
+Examples:
+  index create -f en-us.json  creates a pseudo-localized file from 'en-us.json'
 ```
-
-The input file is required for the utility to work.
-
-The output file is optional. If No output file is specified, we will create a pseudo_locale.json file in the directory where the utility was executed.
 
 ## Authors
 
@@ -46,5 +56,5 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## Acknowledgments
 
-* [Tryggvigy Gylfason](https://github.com/tryggvigy) for borrowing his pseudo-localization utility
+* [Tim Whidden](https://github.com/twhid) and [1stdibs](https://github.com/1stdibs) for their [icu-pseudo-translate](https://github.com/1stdibs/icu-pseudo-translate) utility
 * [Alibaba Group](https://github.com/alibaba/) for creating [react-intl-universal](https://github.com/alibaba/react-intl-universal)
