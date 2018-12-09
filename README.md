@@ -6,6 +6,40 @@ This tool converts a locale source file as the ones used by [react-intl-universa
 
 I have written a simple example on [Repl.it](https://repl.it/@sigurdvh/React-Intl-Universal-Pseudo-Converter-Example?language=nodejs). Simply visit the website, and modify the locale.json file. Once done, hit the `run` button. The file will be generated on the file system. Since Repl.it doesn't know there is a new file, the UI won't refresh by itself until you make a change, so go ahead and try to add a new file or folder and you will see the pseudo file appear.
 
+The input file is the following:
+
+```json
+{
+  "Company_label": "Title for the company",
+  "navigation": {
+    "menu_open": "Open the menu",
+    "account_login": "Log in to the account",
+    "account_logout": "Log out of the account"
+  },
+  "about_page": {
+    "title": "About page",
+    "Subtitle": "Something about the about page"
+  }
+}
+```
+
+The output from the utility is the following:
+
+```json
+{
+  "Company_label": "Tïƭℓè ƒôř ƭhè çô₥ƥáñ¥",
+  "navigation": {
+    "menu_open": "Óƥèñ ƭhè ₥èñú",
+    "account_login": "£ôϱ ïñ ƭô ƭhè áççôúñƭ",
+    "account_logout": "£ôϱ ôúƭ ôƒ ƭhè áççôúñƭ"
+  },
+  "about_page": {
+    "title": "Âβôúƭ ƥáϱè",
+    "Subtitle": "§ô₥èƭhïñϱ áβôúƭ ƭhè áβôúƭ ƥáϱè"
+  }
+}
+```
+
 ## Installing
 
 ### Prerequisites
