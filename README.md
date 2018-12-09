@@ -1,6 +1,6 @@
 # react-intl-universal-pseudo-converter
 
-This tool converts a locale source file as the ones used by [react-intl-universal](https://github.com/alibaba/react-intl-universal) and outputs a new file with pseudo-localized strings. The pseudo-localization is carried out by [Tryggvigy Gylfason's](https://github.com/tryggvigy) [pseudo-lozalization library](https://github.com/tryggvigy/pseudo-localization).
+This tool converts a locale source file as the ones used by [react-intl-universal](https://github.com/alibaba/react-intl-universal) and outputs a new file with pseudo-localized strings. The pseudo-localization is carried out by [1stdibs](https://github.com/1stdibs) [icu-pseudo-translate utility](https://github.com/1stdibs/icu-pseudo-translate).
 
 ## Example
 
