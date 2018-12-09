@@ -93,6 +93,6 @@ See also the list of [contributors](https://github.com/ceszare/react-intl-univer
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details
 
 ## Acknowledgments
-
+* [YARGS](https://github.com/yargs) For their awesome [argument parser](https://github.com/yargs/yargs)
 * [Tim Whidden](https://github.com/twhid) and [1stdibs](https://github.com/1stdibs) for their [icu-pseudo-translate](https://github.com/1stdibs/icu-pseudo-translate) utility
 * [Alibaba Group](https://github.com/alibaba/) for creating [react-intl-universal](https://github.com/alibaba/react-intl-universal)
