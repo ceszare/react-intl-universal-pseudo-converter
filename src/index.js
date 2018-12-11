@@ -1,4 +1,6 @@
+#! /usr/bin/env node
 const fs = require('fs');
+const path = require('path');
 
 function getParsedArguments() {
   return require('./argsParser');
@@ -13,8 +15,18 @@ function processLocale(locale) {
   return transform_tree(locale);
 }
 
+function ensureDirectoryExistence(filePath) {
+  const dirname = path.dirname(filePath);
+  if (fs.existsSync(dirname)) {
+    return true;
+  }
+  ensureDirectoryExistence(dirname);
+  fs.mkdirSync(dirname);
+}
+
 function writeLocaleToFile(argv, locale) {
   const localeString = JSON.stringify(locale, null, 2);
+  ensureDirectoryExistence(argv.output);
   fs.writeFileSync(argv.output, localeString, argv.encoding);
 }
 
