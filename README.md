@@ -46,7 +46,6 @@ The output from the utility is the following:
 
 The package requires you to define an input localization file that uses [ICU message format](http://userguide.icu-project.org/formatparse/messages) strings with the [nested JSON locale format defined by react-intl-universal](https://github.com/alibaba/react-intl-universal/releases/tag/1.4.3).
 
-
 To install it locally, run the following command:
 
 ### NPM
@@ -58,7 +57,7 @@ npm i -g react-intl-universal-pseudo-converter
 ### Yarn
 
 ```
-yarn global add react-intl-universal-pseudo-converter 
+yarn global add react-intl-universal-pseudo-converter
 ```
 
 ## Using the utility
@@ -84,7 +83,7 @@ Examples:
 
 ## Authors
 
-* **Cesar Zapata** - *Initial work* - [Ceszare](https://github.com/Ceszare)
+- **Cesar Zapata** - _Initial work_ - [Ceszare](https://github.com/Ceszare)
 
 See also the list of [contributors](https://github.com/ceszare/react-intl-universal-pseudo-converter/contributors) who participated in this project.
 
@@ -93,6 +92,7 @@ See also the list of [contributors](https://github.com/ceszare/react-intl-univer
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details
 
 ## Acknowledgments
-* [YARGS](https://github.com/yargs) For their awesome [argument parser](https://github.com/yargs/yargs)
-* [Tim Whidden](https://github.com/twhid) and [1stdibs](https://github.com/1stdibs) for their [icu-pseudo-translate](https://github.com/1stdibs/icu-pseudo-translate) utility
-* [Alibaba Group](https://github.com/alibaba/) for creating [react-intl-universal](https://github.com/alibaba/react-intl-universal)
+
+- [YARGS](https://github.com/yargs) For their awesome [argument parser](https://github.com/yargs/yargs)
+- [Tim Whidden](https://github.com/twhid) and [1stdibs](https://github.com/1stdibs) for their [icu-pseudo-translate](https://github.com/1stdibs/icu-pseudo-translate) utility
+- [Alibaba Group](https://github.com/alibaba/) for creating [react-intl-universal](https://github.com/alibaba/react-intl-universal)

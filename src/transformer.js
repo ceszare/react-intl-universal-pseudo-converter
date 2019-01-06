@@ -1,4 +1,4 @@
-const { pseudoTranslate } = require('icu-pseudo-translate');
+const { pseudoTranslate } = require("icu-pseudo-translate");
 
 /**
  * A utility that iterates through a tree and returns a new copy of the tree, where all the
@@ -8,15 +8,18 @@ const { pseudoTranslate } = require('icu-pseudo-translate');
  * @returns - A reference to the root node of a new tree, in which string leaf nodes have been pseudo-localized.
  */
 function transform_tree(node) {
-  if (typeof node === 'string') {
+  if (typeof node === "string") {
     return pseudoTranslate(node);
-  } else if (Array.isArray(node)){
+  } else if (Array.isArray(node)) {
     return node.reduce((accumulator, currentValue) => {
       return [...accumulator, transform_tree(currentValue)];
     }, []);
-  } else if (typeof node === 'object' && node !== null) {
+  } else if (typeof node === "object" && node !== null) {
     return Object.keys(node).reduce((accumulator, currentValue) => {
-      return { ...accumulator, [currentValue]: transform_tree(node[currentValue]) };
+      return {
+        ...accumulator,
+        [currentValue]: transform_tree(node[currentValue])
+      };
     }, {});
   } else {
     return node;
@@ -24,3 +27,4 @@ function transform_tree(node) {
 }
 
 module.exports = transform_tree;
+

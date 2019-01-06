@@ -1,5 +1,5 @@
 module.exports = {
-  file: 'mockInputFile',
-  encoding: 'mockEncoding',
-  output: 'mockOutputFile'
-}
+  file: "mockInputFile",
+  encoding: "mockEncoding",
+  output: "mockOutputFile"
+};
