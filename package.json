@@ -1,6 +1,6 @@
 {
   "name": "react-intl-universal-pseudo-converter",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A utility to convert JSON locale files into pseudo-localization format.",
   "bin": "src/index.js",
   "scripts": {

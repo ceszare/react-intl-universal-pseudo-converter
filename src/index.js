@@ -1,9 +1,9 @@
 #! /usr/bin/env node
-const fs = require('fs');
-const path = require('path');
+const fs = require("fs");
+const path = require("path");
 
 function getParsedArguments() {
-  return require('./argsParser');
+  return require("./argsParser");
 }
 
 function getLocaleFromArguments(argv) {
@@ -11,7 +11,7 @@ function getLocaleFromArguments(argv) {
 }
 
 function processLocale(locale) {
-  const transform_tree = require('./transformer');
+  const transform_tree = require("./transformer");
   return transform_tree(locale);
 }
 
